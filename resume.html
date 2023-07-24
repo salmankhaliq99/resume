@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4108cb22cf.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="/sk_favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <title>Resume | Salman Khaliq</title>
+        <style>
+            html {
+                font-size: 10px;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-image: linear-gradient(to right, rgb(146, 86, 146), #87CEEB);
+                font-family: Comic Sans MS;
+            }
+            .mainBodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .bodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: white;
+                width: 80%;
+                height: 600px;
+                margin-top: 70px;
+                border-radius: 30px;
+            }
+            .leftContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #04b4e9;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                width: 25%;
+            }
+            .centerContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: auto;
+                background-color: #04b4e9;
+            }
+            .rightContainer {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 30px;
+                margin-left: -30px;
+                width: 75%;
+            }
+            .leftPic {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .leftPic img {
+                border-style: ridge;
+                border: 2px solid white;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .title h1 {
+                font-size: 3rem;
+                color: white;
+                text-align: center;
+            }
+            .title p {
+                font-size: 2rem;
+                color: white;
+                text-align: center;
+            }
+            .socialLinks {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 70%;
+            }
+            .socialLinks i {
+                font-size: 2.5rem;
+                color: white;
+            }
+            .socialLinks i:hover {
+                color: black;
+            }
+            .btn {
+                font-size: 2rem;
+                border-radius: 30px;
+                padding: 1rem;
+                color: #04b4e9;
+                background-color: white;
+                border: 2px solid white;
+            }
+            .btn:hover {
+                color: white;
+                background-color: #04b4e9;
+                border: 2px solid white;
+            }
+            .navbar {
+                background-color: transparent;
+                border-top-left-radius: 3rem;
+                border-top-right-radius: 3rem;
+                box-shadow: 0px 2px 10px 0px #04b4e9;
+            }
+            .navbar-brand {
+                font-size: 3rem;
+            }
+            .nav-link {
+                font-size: 1.8rem;
+            }
+            .nav-link:hover {
+                color: #04b4e9;
+            }
+            .active {
+                color: #04b4e9 !important;
+            }
+            #navbarNav {
+                margin-right: 30px;
+            }
+            .rightBodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .mainfooter  {
+                border-bottom-left-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                min-height: 5rem;
+                background-color: #ffffff;
+                border-top: 1px solid;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .fspan {
+                font-size: 1.5rem;
+                margin-left: 2rem;
+                font-weight: bold;
+            }
+            .socialLinksFooter {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 2rem;
+            }
+            .socialLinksFooter i {
+                font-size: 2rem;
+                color: black;
+            }
+            .socialLinksFooter i:hover {
+                color: #04b4e9;
+            }
+            .fa-brands {
+                font-size: 10rem;
+                margin-left: 10px;
+            }
+
+            /* Resume Container */
+            .resume {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: start;
+                width: 100%;
+            }
+            .edu_exp {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5rem;
+                width: 45%;
+                border-right: 2px solid #04b4e9;
+                margin-left: 2rem;
+            }
+            .skillset {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                margin-top: 5rem;
+                width: 45%;
+                margin-left: 2rem;
+            }
+            .timeline {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+            .timeline-item {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                /*position: relative;*/
+                padding-bottom: 20px;
+                width: 100%;
+            }
+            .timeline-marker {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #04b4e9;
+                margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*color: #fff;*/
+                font-weight: bold;
+                position: relative;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+            }
+            .timeline-marker::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 6px;
+                height: 6px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            .timeline-marker::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: calc(100% + 8.5rem);
+                background-color: #04b4e9;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+            }
+            .timeline-marker2 {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #04b4e9;
+                margin-right: 20px;
+                /*display: flex;
+                justify-content: center;
+                align-items: center;*/
+                /*color: #fff;*/
+                font-weight: bold;
+                position: relative;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+            }
+            .timeline-marker2::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 6px;
+                height: 6px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            .timeline-marker2::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: calc(100% + 27rem);
+                background-color: #04b4e9;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+            }
+            .timeline-content {
+                margin-left: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: 100%;
+            }
+            .timeline-title {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                background-color: #04b4e9;
+                color: #fff;
+                font-size: 2rem;
+                width: 20rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                width: 80%;
+            }
+            .timeline-date {
+                font-style: italic;
+                color: #888;
+                font-size: 1.5rem;
+                width: 100%;
+            }
+            .timeline-content p {
+                font-size: 2rem;
+                width: 100%;
+            }
+            .timeline-content a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: black;
+                width: 100%;
+            }
+            .timeline-content a:hover {
+                color: #04b4e9;
+            }
+            .tdiv2 {
+                margin-top: 2rem;
+            }
+            .coding {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+            }
+            .skills, .skills2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin-top: 2rem;
+            }
+            .coding h2 {
+                text-decoration: underline;
+                text-decoration-color: #04b4e9;
+                text-decoration-thickness: 5px;
+                font-weight: bold;
+            }
+            .skills h5 {
+               font-weight: bold; 
+            }
+            .skills div {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            .skills2 h5 {
+               font-weight: bold; 
+            }
+            .skills2 div {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            .skills2 {
+                margin-top: 0;
+            }
+            .progress-bar {
+                width: 100%;
+                height: 10px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                margin: 20px 0;
+                overflow: hidden;
+                margin-top: -0.12rem;
+                border: 1px solid black;
+                padding-left: 0.3rem;
+                padding-right: 0.3rem;
+            }    
+            .progress-bar-inner {
+                height: 50%;
+                background-color: #04b4e9;
+                width: 100%;
+            }
+            .progress-bar-innerJs {
+                height: 50%;
+                background-color: #04b4e9;
+                width: 70%;
+            }
+            .progress-bar-innersass {
+                height: 50%;
+                background-color: #04b4e9;
+                width: 60%;
+            }
+            .progress-bar-innergit {
+                height: 50%;
+                background-color: #04b4e9;
+                width: 80%;
+            }
+            .cSkills {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+            .cSkills h2 {
+                text-decoration: underline;
+                text-decoration-color: #04b4e9;
+                text-decoration-thickness: 5px;
+                font-weight: bold;
+                margin-left: 5rem;
+            }
+            .cSkills ul {
+                margin-top: 2rem;
+                margin-left: 5rem;
+                border: 2px solid #04b4e9;
+                border-radius: 20px;
+                padding: 1rem;
+                width: 90%;
+                list-style: none;
+            }
+            .cSkills ul:hover {
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+            }
+            .cSkills li {
+                margin-left: 20px;
+                margin-bottom: 1rem;
+                width: 95%;
+                font-size: 1.5rem;
+            }
+            .cSkills li:before {
+                content: "\2666";
+                padding-right: 1rem;
+                font-size: 3rem;
+                font-weight: bold;
+                color: #04b4e9;
+            }
+            .sspan {
+                font-weight: bold;
+                color: #04b4e9;
+            }
+            .mainHeading {
+                display: flex;
+                flex-direction: row;
+                justify-content: stretch;
+                align-items: center;
+                margin-top: 30px;
+                width: 100%;
+            }
+            .mainHeading h1 {
+                font-size: 5rem;
+                margin-left: 20px;
+                text-align: center;
+            }
+
+            /*Customize scrollbar*/
+            .rightBodyContainer::-webkit-scrollbar {
+                width: 8px;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-thumb {
+                background-color: #888;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+            }
+            .cinfo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .cinfo i {
+                font-size: 3rem;
+            }
+            .cinfo p {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                padding-top: 1rem;
+                color: #fff;
+                font-weight: bold;
+            }
+            .cinfofooter {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                display: none;
+            }
+            .cinfofooter i {
+                font-size: 3rem;
+            }
+            .cinfofooter p {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                padding-top: 1rem;
+                color: #000;
+                font-weight: bold;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (max-width: 768px) {
+                html {
+                    font-size: 6px;
+                }
+                .leftContainer, .centerContainer {
+                    display: none;
+                }
+                .rightContainer {
+                    margin: 0;
+                    width: 100%;
+                }
+                .navbar-toggler {
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+                #navbarNav {
+                    margin-top: 20px;
+                }
+                .nav-link {
+                    font-size: 3rem;
+                }
+                .fspan {
+                    display: none;
+                }
+                .cinfofooter {
+                    display: flex;
+                }
+                .resume {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90%;
+                }
+                .edu_exp {
+                    border-right: 0;
+                    width: 100%;
+                }
+                .skillset {
+                    margin-left: 0;
+                    width: 80%;
+                    margin-top: 50px;
+
+                }
+                .timeline-marker {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+                .timeline-marker::before {
+                    width: 4px;
+                    height: 4px;
+                }
+                .timeline-marker::after {
+                    height: calc(100% + 10.5rem);
+                }
+                .timeline-marker2 {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+                .timeline-marker2::before {
+                    width: 4px;
+                    height: 4px;
+                }
+                .timeline-marker2::after {
+                    height: calc(100% + 27rem);
+                }
+                .timeline-title {
+                    width: 70%;
+                    font-size: 12px;
+                }
+                .timeline-date {
+                    font-size: 8px;
+                }
+                .timeline {
+                    width: 100%;
+                }
+                .coding h2 {
+                    font-size: 15px;
+                }
+                .skills {
+                    margin-top: 30px;
+                }
+                .cSkills ul {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+                .cSkills li {
+                    margin-left: 0;
+                    font-size: 12px;
+                }
+                .cSkills {
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+                .cSkills h2 {
+                    margin-left: 0;
+                    font-size: 15px;
+                }
+                .mainHeading {
+                    justify-content: center;
+                }
+                .mainHeading h2 {
+                    margin: 0;
+                }
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                html {
+                    font-size: 6px;
+                }
+                .timeline-date {
+                    font-size: 10px;
+                }
+                .timeline-content p {
+                    font-size: 15px;
+                }
+                .edu_exp {
+                    min-height: 406.17px;
+                }
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                html {
+                    font-size: 8px;
+                }
+                .timeline-date {
+                    font-size: 15px;
+                }
+                .timeline-content p {
+                    font-size: 20px ;
+                }
+                .timeline-marker::after {
+                    height: calc(100% + 11rem);
+                }
+                .timeline-marker2::after {
+                    height: calc(100% + 38rem);
+                }
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                html {
+                    font-size: 10px;
+                }
+                .timeline-marker2::after {
+                    height: calc(100% + 28rem);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainBodyContainer">  
+            <div class="bodyContainer">
+                <!--Left Side Container-->
+                <div class="leftContainer">
+                    <div class="leftPic">
+                        <img src="/salman_khaliq_profile_picture_1.png" class="rounded-circle img-fluid" alt="Salman Khaliq">
+                    </div>
+                    <div class="title">
+                        <h1>Salman Khaliq</h1>
+                        <p>Frontend Web Developer</p>
+                    </div>
+                    <div class="socialLinks">
+                        <a href="https://www.linkedin.com/in/salmankhaliq99" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/salmankhaliq99/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/SalmanKhaliq99" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/salmankhaliq99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="cinfo">
+                        <i class="fa-brands fa-whatsapp" style="color: #fff;"></i>
+                        <p>0092 303 6166161</p>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=17qL9j4qPzq4NbhN9LTELqrw8FtBYQ_kl" class="btn btn primary" role="button" download>Download CV <i class="fas fa-download"></i></a>
+                </div>
+                <!--Middle Container-->
+                <div class="centerContainer"></div>
+                <!--right Side Container-->
+                <div class="rightContainer">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="/index.html"><img src="/salman_khaliq_logo.png" class="rounded img-fluid logo" alt="Salman Khaliq"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="/resume.html">Resume</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/portfolio.html">My Work</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <!--Right Container Body-->
+                    <div class="container rightBodyContainer">
+                        <div class="mainHeading">
+                            <h1>My Resume</h1>
+                        </div>
+                        <!--Resume Content Box-->
+                        <div class="resume">
+                            <div class="edu_exp">   
+                                <div class="timeline">    
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">Experience</div>
+                                            <div class="timeline-date">From W3School in 2022</div>
+                                            <p>Frontend Web Developer</p>
+                                        </div>
+                                    </div> 
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker2"></div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">Experience</div>
+                                            <div class="timeline-date">An Online Store Developed by Me</div>
+                                            <a href="https://craftoo.store/" target="_blank">www.craftoo.store</a>
+                                            <div class="timeline-date tdiv2">An Online Store Developed by Me</div>
+                                            <a href="https://martmount.com/" target="_blank">www.martmount.com</a>
+                                            <div class="timeline-date tdiv2">A 3PL Website Developed by Me</div>
+                                            <a href="https://penwarehousing.com/" target="_blank">www.penwarehousing.com</a>
+                                            <div class="timeline-date tdiv2">eCommerce Agency Website Developed by Me</div>
+                                            <a href="https://penwarehousing.com/" target="_blank">www.ecommers.pro</a>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="skillset">
+                                <div class="coding">
+                                    <h2>Codding Skills</h2>
+                                    <div class="skills">
+                                        <h5>HTML</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>CSS</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>JavaScript</h5>
+                                        <div>70%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-innerJs"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>Bootstrap</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>SASS</h5>
+                                        <div>60%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-innersass"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>JQuery</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>Git</h5>
+                                        <div>80%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-innergit"></div>
+                                    </div>
+                                    <div class="skills2">
+                                        <h5>W3CSS</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>   
+                                    <div class="skills2">
+                                        <h5>RWD</h5>
+                                        <div>100%</div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="cSkills">
+                            <h2>Complementary Skills</h2>
+                            <ul>
+                                <li>Proficient in <span class="sspan">Canva</span>, skilled in creating visually appealing and simplistic images and graphics for websites.</li>
+                                <li>Fully knowledgeable in implementing <span class="sspan">Meta Tags</span>, including <span class="sspan">Canonical Tags</span>, <span class="sspan">Shema Tags</span>, <span class="sspan">Open Graph Tags</span>, and <span class="sspan">Twitter Cards</span> for enhanced website optimization and social media sharing.</li>
+                                <li>Well-versed in utilizing essential Google products (<span class="sspan">Google Webmaster Tools</span>, <span class="sspan">Google Search Console</span>, <span class="sspan">Google Page Speed</span>, <span class="sspan">Google Developer Tool</span>, <span class="sspan">Google Markup Testing Tool</span>) for website optimization and performance enhancement.</li>
+                                <li>Experienced in <span class="sspan">Keyword Research</span> and implementation techniques to optimize website content and improve search engine rankings.</li>
+                                <li><span class="sspan">SEO-savvy</span> professional equipped with comprehensive knowledge of cutting-edge techniques to optimize online visibility and drive organic traffic.</li>
+                                <li>Proficient in creating <span class="sspan">AMP</span> and implementing <span class="sspan">Rich Snippets</span> to enhance website performance and improve search engine visibility.</li>
+                                <li>Skilled in <span class="sspan">Social Media Marketing</span>, adaptable to empowering advertising managers (<span class="sspan">Facebook</span>, <span class="sspan">Twitter</span>, <span class="sspan">LinkedIn</span>, <span class="sspan">Pinterest</span>) for effective brand reach and engagement.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--Footer-->
+                    <footer class="container-fluid mainfooter">
+                        <span class="fspan">&copy; 2023 My Website. All rights reserved.</span>
+                        <div class="cinfofooter">
+                            <i class="fa-brands fa-whatsapp" style="color: #000;"></i>
+                            <p>0092 303 6166161</p>
+                        </div>
+                        <div class="socialLinksFooter">
+                            <a href="https://www.linkedin.com/in/salmankhaliq99" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/salmankhaliq99/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SalmanKhaliq99" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://github.com/salmankhaliq99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>       
+    </body>
+</html>

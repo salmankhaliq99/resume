@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4108cb22cf.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
+        <title>Salman Khaliq | Frontend Web Developer</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+            html {
+                font-size: 10px;
+            }
+            body {
+                background-color: #007ced;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            /*Main Body Container*/
+            .mainbodycontainer {
+                background-color: white;
+                margin-top: 7.5rem;
+                height: 60rem;
+                border-radius: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            /*side Container*/
+            .side {
+                background-color: #04b4e0;
+                width: 30%;
+                height: auto;
+                border-top-left-radius: 3rem;
+                border-bottom-left-radius: 3rem;
+                margin-left: -1.2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .pp {
+                border-style: ridge;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .niche {
+                font-size: 2rem;
+                color: #ffffff;
+            }
+            .social {
+                width: 70%;
+                height: auto;
+                font-size: 2rem;
+            }
+            .btn1 {
+                font-size: 2rem;
+                border: 0.2rem solid;
+                border-radius: 3rem;
+                padding: 1rem;
+                border-color: white;
+                font-weight: bold;
+                color: white;
+            }
+            .btn1:hover {
+                background-color: white;
+                border-color: white;
+                color: #04b4e0;
+                transition: 0.3s;
+            }
+            
+            /*Extra Box*/
+            .extra {
+                width: 1rem;
+                height: 60rem;
+                background-color: #04b4e0;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            /*Main Window Container*/
+            .main {
+                background-color: white;
+                width: 100%;
+                height: auto;
+                border-radius: 3rem;
+                z-index: 1;
+                margin-left: -25px;
+                margin-right: -12px;
+                display: flex;
+                flex-direction: column;
+            }
+            .navbar {
+                background-color: transparent;
+                border-top-left-radius: 3rem;
+                border-top-right-radius: 3rem;
+            }
+            .navbar-brand {
+                font-size: 3rem;
+            }
+            .nav-link {
+                font-size: 1.8rem;
+            }
+            
+            /*Main Box*/
+            .mainbox {
+                overflow: auto;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            /* Customize scrollbar */
+            .mainbox::-webkit-scrollbar {
+                width: 8px;
+                border-radius: 0.4rem;
+            }
+            .mainbox::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 0.4rem;
+            }
+            .mainbox::-webkit-scrollbar-thumb {
+                background-color: #888;
+                border-radius: 0.4rem;
+            }
+            .mainbox::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+            }
+
+            /*Bio Box*/
+            .biobox {
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .bioimgbox {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 6.0rem;
+            }
+            .ip {
+                border: 2rem solid white;
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e0;
+            }
+            .biodiv1 {
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+            .intro {
+                font-size: 2rem;
+            }
+            .btndiv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: start;
+                margin-top: 2rem;
+                width: 100%;
+            }
+            .btn2 {
+                font-size: 2rem;
+                border: 0.2rem solid;
+                border-radius: 3rem;
+                padding: 1rem 3rem 1rem 3rem;
+                background-color: white;
+                border-color: #04b4e0;
+                color: #04b4e0;
+            }
+            .btn2:hover {
+                background-color: #04b4e0;
+                border: 0.2rem solid white;
+            }
+            .btn3 {
+                font-size: 2rem;
+                border: 0.2rem solid #04b4e0;
+                border-radius: 3rem;
+                padding: 1rem; 
+                color: white;
+                background-color: #04b4e0;
+                margin-top: 2rem;
+                display: none;
+            }
+            .btn3:hover {
+                border: 0.2rem solid #04b4e0;
+                color: #04b4e0;
+            }        
+            /*What I Do Container*/
+            .wid {
+                margin-top: 10rem;
+            }
+            .mainilbox {
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .il {
+                margin-left: 5rem;
+                width: 40%;
+                height: auto;
+                border: 0.2rem solid #04b4e9;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .il:hover {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .fa-brands {
+                color: #ffffff;
+            }
+            .fa-brands:hover {
+                color: black;
+            }
+            .if {
+                font-size: 5rem;
+                margin-left: 1rem;
+            }
+            .ld {
+                width: 80%;
+                height: auto;
+                margin-top: 1rem;
+            }
+            .ld p {
+                font-size: 1.5rem;
+            }
+            .il2 {
+                width: 40%;
+                height: auto;
+                border: 0.2rem solid #04b4e9;
+                border-radius: 1rem;
+                margin-right: 5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .il2:hover {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .ildiv1 {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .ildiv2 {
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /*Fact Box*/
+            .mainfbox {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .fbox {
+                width: 20%;
+                height: auto;
+                border: 0.2rem solid #04b4e0;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .fbox:hover {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .ficon {
+                margin-top: 1rem;
+                font-size: 5rem;
+            }
+            .fheading {
+                margin: 1rem;
+                font-size: 2rem;
+            }
+            .ftext {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            /*Testimonials*/
+            .testibox {
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                display: flex;
+                width: 50%;
+            }
+            .testiimg {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e0;
+            }
+
+            /*Main Footer*/
+             .mainfooter  {
+                border-bottom-left-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                min-height: 5rem;
+                background-color: #ffffff;
+                border-top: 1px solid;
+                box-shadow: 0px 0px 1rem 0px black;
+            }
+
+            /*HTML Headings*/
+            h1 {
+                font-size: 3rem;
+                color: #ffffff;
+            }
+            h2 {
+                font-size: 4rem;
+            }
+            h3 {
+                margin-left: 5rem;
+                text-decoration: underline;
+                text-decoration-color: #04b4e0; 
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            h4 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            
+            /* Extra small devices (phones, 600px and down)
+            @media only screen and (max-width: 600px) {
+                html {
+                    font-size: 2px;
+                }
+                
+            }
+            Small devices (portrait tablets and large phones, 600px and up)
+            @media only screen and (min-width: 600px) {
+                html {
+                    font-size: 5px;
+                }*/
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (max-width: 768px) {
+                html {
+                    font-size: 6px;
+                }
+                .side, .extra {
+                    display: none;
+                }
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                html {
+                    font-size: 8px;
+                }
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                html {
+                    font-size: 10px;
+                }
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                html {
+                    font-size: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--Main Container-->
+        <div class="container mainbodycontainer">
+
+            <!--Side Section-->
+            <div class="side">
+
+                <div>
+                    <img src="/Untitled_design_144x144.png" class="rounded-circle img-fluid pp" alt="Salman Khaliq">
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h1>Salman Khaliq</h1>
+                    <p class="niche">Frontend Web Developer</p>
+                </div>
+                
+                <div class="d-inline-flex align-items-center justify-content-around social">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+                
+                <button type="button" class="btn btn1">Download CV <i class="fas fa-download"></i></button>
+            </div>
+            
+            <!--Extra Box-->
+            <div class="extra"></div>
+            
+            <!--Main Window Box-->
+            <div class="main">
+                
+                <!--navbar-->
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="/logo_final-removebg-preview_120x53.png" class="rounded img-fluid" alt="Salman Khaliq"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Resume</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                <!--main box-->
+                <div class="container-fluid mainbox">
+                    
+                    <!--bio box-->
+                    <div class="container-fluid biobox">
+                        
+                        <div class="bioimgbox">
+                            <img src="/IMG20211212160206_3_250x250.jpg" class="rounded-circle img-fluid ip" alt="Salman Khaliq">
+                        </div>
+
+                        <div class="biodiv1">
+
+                            <h2>Salman Khaliq</h2>
+                            <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores iste nisi temporibus, quibusdam sapiente ab dolor porro iusto, et laborum amet eum, minima veritatis odit. Libero error quisquam neque.</p>
+                            
+                            <div class="btndiv">
+                                <button type="button" class="btn btn-primary btn2">Hire Me!</button>
+                                <button type="button" class="btn btn3">Download CV</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                
+                    <!--Do Container-->
+                    <div class="container d-flex wid">
+                        <h3>What I Do</h3>
+                    </div>
+                    
+                    <!--Icon List-->
+                    <div class="container-fluid mainilbox">
+                        
+                        <div class="ildiv1">
+                            
+                            <div class="il">
+                                <i class="fa-brands fa-wordpress if" style="color: #04b4e9;"></i>
+                                <div class="d-flex flex-column ld">
+                                    <h4>WordPress</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste architecto tempora provident labore facilis molestias?</p>
+                                </div> 
+                            </div>
+
+                            <div class="il2">
+                                <i class="fa-brands fa-joomla if" style="color: #04b4e9;"></i>
+                                <div class="d-flex flex-column ld">
+                                    <h4>Joomla</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste architecto tempora provident labore facilis molestias?</p>
+                                </div>
+                            </div>
+                       
+                        </div>
+
+                        <div class="ildiv2">
+                            
+                            <div class="il">
+                                <i class="fa-brands fa-magento if" style="color: #04b4e9;"></i>
+                                <div class="d-flex flex-column ld">
+                                    <h4>Magento</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste architecto tempora provident labore facilis molestias?</p>
+                                </div> 
+                            </div>
+
+                            <div class="il2">
+                                <i class="fa-brands fa-drupal if" style="color: #04b4e9;"></i>
+                                <div class="d-flex flex-column ld">
+                                    <h4>Drupal</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste architecto tempora provident labore facilis molestias?</p>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+
+                    <!--My Facts-->
+                    <div class="container d-flex wid">
+                        <h3>My Facts</h3>
+                    </div>
+
+                    <div class="container-fluid mainfbox">
+                        
+                        <div class="fbox"> 
+                            <i class="fa-regular fa-heart ficon" style="color: #04b4e9;"></i>
+                            <h5 class="fheading">Happy Clients</h5>
+                            <p class="ftext">6</p>
+                        </div>
+
+                        <div class="fbox">
+                            <i class="fa-regular fa-handshake ficon" style="color: #04b4e9;"></i>
+                            <h5 class="fheading">Work Done</h5>
+                            <p class="ftext">8</p>
+                        </div>
+
+                        <div class="fbox">
+                            <i class="fa-regular fa-clock ficon" style="color: #04b4e9;"></i>
+                            <h5 class="fheading">Working Hours</h5>
+                            <p class="ftext">700+</p>
+                        </div>
+                    
+                    </div>
+
+                    <!--Testimonials-->
+                    <div class="container d-flex wid">
+                        <h3>Testimonials</h3>
+                    </div>
+                    
+                    <div class="container testibox">
+                        <img src="/kiran_feedback.png" class=".img-fluid testiimg rounded" alt="Kiran Naz">
+                    </div>
+                
+                </div>
+
+                <!--footer-->
+                <footer class="container-fluid d-inline-flex justify-content-center align-items-center mainfooter">
+                    <span>&copy; 2023 My Website. All rights reserved.</span>
+                </footer>
+            
+            </div>
+        
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>       
+    
+    </body>
+</html>

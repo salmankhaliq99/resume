@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4108cb22cf.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="/sk_favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <title>Salman Khaliq | Frontend Web Developer</title>
+        <style>
+            html {
+                font-size: 10px;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-image: linear-gradient(to right, rgb(146, 86, 146), #87CEEB);
+                font-family: Comic Sans MS;
+            }
+            .mainBodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .bodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: white;
+                width: 80%;
+                height: 600px;
+                margin-top: 70px;
+                border-radius: 30px;
+            }
+            .leftContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #04b4e9;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                width: 25%;
+            }
+            .centerContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: auto;
+                background-color: #04b4e9;
+            }
+            .rightContainer {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 30px;
+                margin-left: -30px;
+                width: 75%;
+            }
+            .leftPic {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .leftPic img {
+                border-style: ridge;
+                border: 2px solid white;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .title h2 {
+                font-size: 3rem;
+                color: white;
+                text-align: center;
+            }
+            .title p {
+                font-size: 2rem;
+                color: white;
+                text-align: center;
+            }
+            .socialLinks {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 70%;
+            }
+            .socialLinks i {
+                font-size: 2.5rem;
+                color: white;
+            }
+            .socialLinks i:hover {
+                color: black;
+            }
+            .btn {
+                font-size: 2rem;
+                border-radius: 30px;
+                padding: 1rem;
+                color: #04b4e9;
+                background-color: white;
+                border: 2px solid white;
+            }
+            .btn:hover {
+                color: white;
+                background-color: #04b4e9;
+                border: 2px solid white;
+            }
+            .navbar {
+                background-color: transparent;
+                border-top-left-radius: 3rem;
+                border-top-right-radius: 3rem;
+                box-shadow: 0px 2px 10px 0px #04b4e9;
+            }
+            .navbar-brand {
+                font-size: 3rem;
+            }
+            .nav-link {
+                font-size: 1.8rem;
+            }
+            .nav-link:hover {
+                color: #04b4e9;
+            }
+            .active {
+                color: #04b4e9 !important;
+            }
+            #navbarNav {
+                margin-right: 30px;
+            }
+            .rightBodyContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .introContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 4rem;
+            }
+            .introdata {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .introbtn {
+                display: flex;
+                flex-direction: column;
+            }
+            .introdiv1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+                margin-left: 3rem;
+            }
+            .introdiv1 img {
+                border: 1rem solid white;
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .introdiv2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: 60%;
+            }
+            .introdiv2 h1 {
+                font-size: 5rem;
+            }
+            .introdiv2 p {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+            .btn1 {
+                font-size: 2rem;
+                border: 2px solid #04b4e9;
+                border-radius: 30px;
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: #04b4e9;
+                color: white;
+            }
+            .btn1:hover {
+                background-color: white;
+                color: #04b4e9;
+                border-color: #04b4e9;
+            }
+            .btn2 {
+                font-size: 2rem;
+                border: 2px solid #04b4e9;
+                border-radius: 30px;
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: white;
+                color: #04b4e9;
+                margin-top: 10px;
+                display: none;
+            }
+            .btn2:hover {
+                background-color: #04b4e9;
+                color: white;
+                border-color: white;
+            }
+            .topicContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 3rem;
+            }
+            .topicHeading {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+                margin-top: 10rem;
+                margin-left: 5rem;
+            }
+            .topicHeading h3 {
+                font-size: 3rem;
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: #04b4e9;
+                text-decoration-thickness: 5px;
+            }
+            .iconListContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .iconList1, .iconList2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 40%;
+                margin-top: 30px;
+                border: 2px solid #04b4e9;
+                border-radius: 10px;
+            }
+            .fa-brands {
+                font-size: 10rem;
+                margin-left: 10px;
+            } 
+            .listData {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin: 10px;
+            }
+            .listData h4 {
+                font-size: 3rem;
+            }
+            .listData p {
+                font-size: 1.5rem;
+            }
+            .iconList1:hover, .iconList2:hover {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .mainfbox {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .fbox {
+                width: 20%;
+                height: auto;
+                border: 0.2rem solid #04b4e9;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .fbox:hover {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .ficon {
+                margin-top: 1rem;
+                font-size: 5rem;
+            }
+            .fheading {
+                margin: 1rem;
+                font-size: 2rem;
+            }
+            .ftext {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .testibox {
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                display: flex;
+                width: 50%;
+            }
+            .testiimg {
+                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
+            }
+            .mainfooter  {
+                border-bottom-left-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                min-height: 5rem;
+                background-color: #ffffff;
+                border-top: 1px solid;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            span {
+                font-size: 1.5rem;
+                margin-left: 2rem;
+                font-weight: bold;
+            }
+            .socialLinksFooter {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 2rem;
+            }
+            .socialLinksFooter i {
+                font-size: 2rem;
+                color: black;
+            }
+            .socialLinksFooter i:hover {
+                color: #04b4e9;
+            }
+            
+            /*Customize scrollbar*/
+            .rightBodyContainer::-webkit-scrollbar {
+                width: 8px;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-thumb {
+                background-color: #888;
+                border-radius: 0.4rem;
+            }
+            .rightBodyContainer::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+            }
+            .cinfo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .cinfo i {
+                font-size: 3rem;
+            }
+            .cinfo p {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                padding-top: 1rem;
+                color: #fff;
+                font-weight: bold;
+            }
+            .cinfofooter {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                display: none;
+            }
+            .cinfofooter i {
+                font-size: 3rem;
+            }
+            .cinfofooter p {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                padding-top: 1rem;
+                color: #000;
+                font-weight: bold;
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (max-width: 768px) {
+                html {
+                    font-size: 6px;
+                }
+                .leftContainer, .centerContainer {
+                    display: none;
+                }
+                .rightContainer {
+                    margin: 0;
+                    width: 100%;
+                }
+                .navbar-toggler {
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+                #navbarNav {
+                    margin-top: 20px;
+                }
+                .nav-link {
+                    font-size: 3rem;
+                }
+                .introdata {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .introdiv1 {
+                    margin: 0;
+                    width: 60%;
+                }
+                .introdiv2 {
+                    align-items: center;
+                    margin-top: 2rem;
+                    width: 80%;
+                }
+                .introdiv2 h1 {
+                    font-size: 4rem;
+                    text-align: center;
+
+                }
+                .introdiv2 p {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                .introbtn {
+                    justify-content: stretch;
+                    align-items: stretch;
+                    width: 100%;
+                }
+                .btn1 {
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                .btn2 {
+                    display: block;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                .topicHeading {
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 0;
+                }
+                .iconListContainer {
+                    flex-direction: column;
+                    justify-content: stretch;
+                    align-items: center;
+                }
+                .iconList1, .iconList2 {
+                    width: 100%;
+                }
+                .mainfbox {
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: space-between;
+                }
+                .fbox {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                .fheading {
+                    font-size: 20px;
+                }
+                .ftext {
+                    font-size: 30px;
+                }
+                .testibox {
+                    width: 100%;
+                }
+                span {
+                    display: none;
+                }
+                .cinfofooter {
+                    display: flex;
+                }
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                html {
+                    font-size: 6px;
+                }
+                .testibox {
+                    width: 100%;
+                }
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                html {
+                    font-size: 8px;
+                }
+                .testibox {
+                    width: 100%;
+                }
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                html {
+                    font-size: 10px;
+                }
+                .testibox {
+                    width: 80%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainBodyContainer">
+            <div class="bodyContainer">
+                <!--Left Side Container-->
+                <div class="leftContainer">
+                    <div class="leftPic">
+                        <img src="/salman_khaliq_profile_picture_1.png" class="rounded-circle img-fluid" alt="Salman Khaliq">
+                    </div>
+                    <div class="title">
+                        <h2>Salman Khaliq</h2>
+                        <p>Frontend Web Developer</p>
+                    </div>
+                    <div class="socialLinks">
+                        <a href="https://www.linkedin.com/in/salmankhaliq99" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/salmankhaliq99/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/SalmanKhaliq99" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/salmankhaliq99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="cinfo">
+                        <i class="fa-brands fa-whatsapp" style="color: #fff;"></i>
+                        <p>0092 303 6166161</p>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=17qL9j4qPzq4NbhN9LTELqrw8FtBYQ_kl" class="btn btn primary" role="button" download>Download CV <i class="fas fa-download"></i></a>
+                </div>
+                <!--Middle Container-->
+                <div class="centerContainer"></div>
+                <!--right Side Container-->
+                <div class="rightContainer">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="/index.html"><img src="/salman_khaliq_logo.png" class="rounded img-fluid logo" alt="Salman Khaliq"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/resume.html">Resume</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/portfolio.html">My Work</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <!--Right Container Body-->
+                    <div class="container rightBodyContainer">  
+                        <div class="introContainer">
+                            <div class="introdata">
+                                <div class="introdiv1">
+                                    <img src="/salman_khaliq_profile_picture_2.jpg" class="rounded-circle img-fluid" alt="Salman Khaliq">
+                                </div>        
+                                <div class="introdiv2">
+                                    <h1>Salman Khaliq</h1>
+                                    <p>Seeking a passionate and skilled frontend web developer to bring your online vision to life? Look no further! I'm Salman Khaliq, a dynamic web developer specializing in HTML5, CSS3, and JavaScript. From captivating designs to SEO optimization, let's create something exceptional together. Your dream website awaits! Reach out now, and let's make it happen!</p>
+                                    
+                                    <div class="introbtn">
+                                        <button type="button" class="btn btn1">Hire Me!</button>
+                                        <a href="https://drive.google.com/uc?export=download&id=17qL9j4qPzq4NbhN9LTELqrw8FtBYQ_kl" class="btn btn-primary btn2" role="button" download>Download CV</a>
+                                    </div>
+                                </div>                      
+                            </div>
+                        </div>
+                        <!--What I Know-->
+                        <div class="topicHeading">
+                            <h3>What I Know</h3>
+                        </div>
+                        <div class="container-fluid topicContainer">
+                            <div class="iconListContainer">                              
+                                <div class="iconList1">
+                                    <i class="fa-brands fa-wordpress" style="color: #04b4e9;"></i>
+                                    <div class="listData">
+                                        <h4>WordPress</h4>
+                                        <p>Widely popular for blogs, small and medium websites. it has user-friendly interface, and vast plugin ecosystem with ease of use.</p>
+                                    </div> 
+                                </div>
+                                <div class="iconList2">
+                                    <i class="fa-brands fa-joomla" style="color: #04b4e9;"></i>
+                                    <div class="listData">
+                                        <h4>Joomla</h4>
+                                        <p>Suitable for medium-sized websites, powerful and flexible, ideal for e-commerce and social networking.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="iconListContainer">        
+                                <div class="iconList1">
+                                    <i class="fa-brands fa-magento" style="color: #04b4e9;"></i>
+                                    <div class="listData">
+                                        <h4>Magento</h4>
+                                        <p>Focused on e-commerce, robust and scalable, equipped with advanced product management and marketing tools.</p>
+                                    </div> 
+                                </div>
+                                <div class="iconList2">
+                                    <i class="fa-brands fa-drupal" style="color: #04b4e9;"></i>
+                                    <div class="listData">
+                                        <h4>Drupal</h4>
+                                        <p>Versatile and powerful, ideal for complex and large-scale websites, suitable for communities, enterprises, and government.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!--My Facts-->
+                        <div class="topicHeading">
+                            <h3>My Facts</h3>
+                        </div>
+                        <div class="container-fluid mainfbox">
+                            <div class="fbox">
+                                <i class="fa-regular fa-heart ficon" style="color: #04b4e9;"></i>
+                                <h4 class="fheading">Happy Clients</h4>
+                                <p class="ftext">6</p>
+                            </div>
+                            <div class="fbox">
+                                <i class="fa-regular fa-handshake ficon" style="color: #04b4e9;"></i>
+                                <h4 class="fheading">Work Done</h4>
+                                <p class="ftext">8</p>
+                            </div>
+                            <div class="fbox">
+                                <i class="fa-regular fa-clock ficon" style="color: #04b4e9;"></i>
+                                <h4 class="fheading">Work Hours</h4>
+                                <p class="ftext">700+</p>
+                            </div>
+                        </div>
+                        <!--Endorsement-->
+                        <div class="topicHeading">
+                            <h3>Endorsement</h3>
+                        </div>
+                        <div class="container testibox">
+                            <img src="/endorsement_kiran_naz.png" class=".img-fluid testiimg rounded" alt="Kiran Naz">
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <footer class="container-fluid mainfooter">
+                        <span>&copy; 2023 My Website. All rights reserved.</span>
+                        <div class="cinfofooter">
+                            <i class="fa-brands fa-whatsapp" style="color: #000;"></i>
+                            <p>0092 303 6166161</p>
+                        </div>
+                        <div class="socialLinksFooter">
+                            <a href="https://www.linkedin.com/in/salmankhaliq99" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/salmankhaliq99/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SalmanKhaliq99" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://github.com/salmankhaliq99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>         
+    </body>
+</html>
