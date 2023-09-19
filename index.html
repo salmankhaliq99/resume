@@ -315,15 +315,30 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
+                width: 100%;
+                border-radius: 15px;
+                border: 5px solid #04b4e9;
+                padding: 0;
+                box-shadow: 0px 0px 1rem 0px #04b4e9;
             }
             .testiimg {
-                box-shadow: 0px 0px 1rem 0.2rem #04b4e9;
                 width: 100%;
             }
             .swiper {
-              width: 80%;
-              height: fit-content;
+              width: 100%;
+              height: auto;
+            }
+            .swiper-button-prev, .swiper-button-next {
+            	color: #04b4e9;
+            }
+            .swiper-button-prev:hover, .swiper-button-next:hover {
+            	color: #c7f0fc;
+            }
+            .swiper-pagination-bullet {
+            	background-color: #fff;
+            }
+            .swiper-pagination-bullet-active {
+            	background-color: #04b4e9;
             }
             .mainfooter  {
                 border-bottom-left-radius: 3rem;
@@ -683,9 +698,6 @@
                                 <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                        <!--<div class="container testibox">
-                            <img src="endorsement_kiran_naz.png" class=".img-fluid testiimg rounded" alt="Kiran Naz">
-                        </div>-->
                     </div>
                     <!--Footer-->
                     <footer class="container-fluid mainfooter">
@@ -708,15 +720,23 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script>
             const swiper = new Swiper('.swiper', {
-              direction: 'vertical',
+            	autoplay: {
+            		delay: 3000,
+            		disableOnIntraction: false,
+            	},
+
               loop: true,
+
               pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
               },
+
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
               },
+
             });
         </script>
     </body>
